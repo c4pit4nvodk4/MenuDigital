@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menús Digitales para Restaurantes</title>
+<style>
+:root{
+  --bg:#0e0e0e;
+  --card:#161616;
+  --text:#eaeaea;
+  --muted:#b5b5b5;
+  --gold:#c9a24d;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:'Segoe UI',Roboto,Arial,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+}
+img{max-width:100%;display:block}
+a{color:var(--gold);text-decoration:none}
+section{padding:60px 20px}
+.fade{opacity:0;transform:translateY(20px);animation:fadeIn 1.2s ease forwards}
+@keyframes fadeIn{to{opacity:1;transform:none}}
+
+/* Portada */
+.portada img{width:100%;height:300px;object-fit:cover}
+
+/* Intro */
+.intro{text-align:center;max-width:1100px;margin:auto}
+.intro h1{font-size:2.4rem;margin-bottom:20px;color:var(--gold)}
+.intro p{color:var(--muted);font-size:1.05rem}
+.whatsapp{display:inline-block;margin-top:25px;padding:14px 28px;border:1px solid var(--gold);border-radius:40px;font-weight:600}
+
+/* Demo */
+.demo{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;max-width:1200px;margin:auto}
+.demo img{border-radius:16px}
+
+/* Clientes */
+.clientes h2{text-align:center;color:var(--gold);margin-bottom:40px}
+.grid-clientes{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:20px;max-width:1100px;margin:auto}
+.grid-clientes img{border-radius:14px;transition:.3s}
+.grid-clientes img:hover{transform:scale(1.05)}
+
+/* Packs */
+.packs h2{text-align:center;color:var(--gold);margin-bottom:40px}
+.pack-imgs{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;max-width:1200px;margin:auto}
+.pack{background:var(--card);border-radius:20px;padding:25px}
+.pack h3{color:var(--gold);margin-bottom:15px}
+.pack ul{padding-left:20px}
+.pack li{margin-bottom:8px;color:var(--muted)}
+
+/* Contacto */
+.contacto{text-align:center;max-width:900px;margin:auto}
+.contacto h2{color:var(--gold);margin-bottom:20px}
+
+/* Footer */
+footer{background:#080808;padding:30px 20px;text-align:center;color:#888;font-size:.9rem}
+
+/* Responsive */
+@media(max-width:600px){
+  .intro h1{font-size:1.8rem}
+}
+</style>
+</head>
+<body>
+
+<!-- Portada -->
+<div class="portada">
+  <img src="/imagenes/portada1.png" alt="Menús Digitales">
+</div>
+
+<!-- Intro -->
+<section class="intro fade">
+  <h1>Menús Digitales para Restaurantes</h1>
+  <p>
+    Lleva tu restaurante al siguiente nivel con un <strong>menú 100% digital</strong>, elegante y fácil de usar.
+    Tus clientes podrán acceder mediante un <strong>código QR</strong> desde su celular, visualizando cada plato
+    con fotografía, precio y descripción detallada.
+    Nuestros menús son completamente editables y personalizables. En solo <strong>24 horas</strong>, nuestro equipo
+    de diseñadores te entregará un menú profesional que puede incluir bebidas, alcohol, aderezos,
+    promociones por temporada, redes sociales y números de delivery.
+  </p>
+  <a class="whatsapp" href="https://wa.me/56982600659" target="_blank">Pide el tuyo por WhatsApp</a>
+</section>
+
+<!-- Demo -->
+<section class="fade">
+  <div class="demo">
+    <img src="imagenes/demo1.png" alt="Demo menú 1">
+    <img src="imagenes/demo2.png" alt="Demo menú 2">
+    <img src="imagenes/demo3.png" alt="Demo menú 3">
+  </div>
+</section>
+
+<!-- Clientes -->
+<section class="clientes fade">
+  <h2>NUESTROS CLIENTES</h2>
+  <div class="grid-clientes">
+    <a href="/Menu/Cliente1.html"><img src="/imagenes/Cliente1.png"></a>
+    <a href="/Menu/Cliente1.html"><img src="/imagenes/Cliente2.png"></a>
+    <a href="/Menu/Cliente1.html"><img src="/imagenes/Cliente3.png"></a>
+    <a href="/Menu/Cliente1.html"><img src="/imagenes/Cliente4.png"></a>
+    <a href="/Menu/Cliente1.html"><img src="/imagenes/Cliente5.png"></a>
+    <a href="/Menu/Cliente1.html"><img src="/imagenes/Cliente6.png"></a>
+    <a href="/Menu/Cliente1.html"><img src="/imagenes/Cliente7.png"></a>
+    <a href="/Menu/Cliente1.html"><img src="/imagenes/Cliente8.png"></a>
+  </div>
+</section>
+
+<!-- Packs -->
+<section class="packs fade">
+  <h2>Packs que te podrían interesar</h2>
+  <div class="pack-imgs">
+    <img src="Imagenes/Pack1.png">
+    <img src="Imagenes/Pack2.png">
+    <img src="Imagenes/Pack3.png">
+  </div>
+
+  <div class="pack-imgs" style="margin-top:40px">
+    <div class="pack">
+      <h3>Todo Digital</h3>
+      <ul>
+        <li>QR en gran formato (Digital)</li>
+        <li>Gráfica QR + logo A4 (Digital)</li>
+        <li>PDF instructivo de uso</li>
+        <li>Contacto por correo y WhatsApp</li>
+        <li>3 meses de asesoría gratuita</li>
+      </ul>
+    </div>
+    <div class="pack">
+      <h3>Pack Impreso</h3>
+      <ul>
+        <li>Incluye todo lo digital</li>
+        <li>Manual impreso</li>
+        <li>4 cuadros A4 con QR</li>
+        <li>Contacto directo para modificaciones</li>
+        <li>3 meses de asesoría gratuita</li>
+      </ul>
+    </div>
+    <div class="pack">
+      <h3>Full Pack</h3>
+      <ul>
+        <li>Todo lo anterior</li>
+        <li>4 cuadros A4 impresos</li>
+        <li>12 stickers QR</li>
+        <li>Contacto permanente</li>
+        <li>5 meses de asesoría gratuita</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Contacto -->
+<section class="contacto fade">
+  <h2>Contáctanos</h2>
+  <p>
+    Para más información, escríbenos directamente a nuestro WhatsApp.
+    Consulta por un pack a tu medida o resuelve cualquier duda con nuestro equipo.
+  </p>
+  <a class="whatsapp" href="https://wa.me/56982600659" target="_blank">+56 9 82 600 659</a>
+</section>
+
+<!-- Footer -->
+<footer>
+  Página creada con HTML5 - Por Luis Salas<br>
+  Consultas para crear tu página web o programas personalizados, comunícate al +56 9 82 600 659
+  <br><br>
+  <div id="sfcgdy9f4eelws9y6x8rt9xj7brbsew6jfr"></div>
+  <script type="text/javascript" src="https://counter1.optistats.ovh/private/counter.js?c=gdy9f4eelws9y6x8rt9xj7brbsew6jfr&down=async" async></script>
+  <noscript><a href="https://www.contadorvisitasgratis.com"><img src="https://counter1.optistats.ovh/private/contadorvisitasgratis.php?c=gdy9f4eelws9y6x8rt9xj7brbsew6jfr"></a></noscript>
+</footer>
+
+</body>
+</html>
