@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menú Restaurante</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:Arial,Helvetica,sans-serif;background:#fff;color:#000;line-height:1.5}
+    a{text-decoration:none;color:inherit}
+
+    /* HERO */
+    .hero{position:relative;width:100%;height:300px;overflow:hidden}
+    .hero video{width:100%;height:100%;object-fit:cover}
+    .hero .logo{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)}
+    .hero .logo img{max-height:140px}
+
+    /* NAV */
+    nav{display:flex;justify-content:center;gap:20px;padding:20px 10px}
+    nav button{padding:10px 22px;border:1px solid #000;background:#fff;cursor:pointer;font-weight:bold;transition:.3s}
+    nav button:hover{background:#000;color:#fff}
+
+    /* SECTIONS */
+    section{padding:40px 10%;scroll-margin-top:80px}
+    section h2{text-align:center;margin-bottom:30px;font-weight:bold}
+
+    .item{display:flex;align-items:center;gap:20px;margin-bottom:25px}
+    .item img{width:120px;height:120px;object-fit:cover}
+    .price{color:#c00;font-weight:bold;font-size:18px}
+    .desc{font-style:italic}
+
+    /* FOOTER */
+    .social{display:flex;justify-content:center;gap:25px;margin-bottom:20px}
+    footer{text-align:center;padding:30px 10px;border-top:1px solid #ddd}
+    footer p{margin-bottom:8px}
+
+    @media(max-width:768px){
+      section{padding:30px 5%}
+      .item{flex-direction:column;align-items:flex-start}
+    }
+  
+    /* BOTÓN VOLVER ARRIBA */
+    .back-to-top{
+      position:fixed;
+      bottom:20px;
+      right:20px;
+      width:50px;
+      height:50px;
+      background:#000;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      cursor:pointer;
+      z-index:999;
+    }
+    .back-to-top::before{
+      content:'▲';
+      color:#fff;
+      font-size:20px;
+      font-weight:bold;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <div class="hero">
+    <video src="/videos/DEMO/1.webm" autoplay loop muted></video>
+    <div class="logo">
+      <img src="/imagenes/DEMO/logoDEMO.png" alt="Logo" />
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <nav>
+    <button onclick="document.getElementById('hamburguesas').scrollIntoView({behavior:'smooth'})">Hamburguesas</button>
+    <button onclick="document.getElementById('pizzas').scrollIntoView({behavior:'smooth'})">Pizzas</button>
+    <button onclick="document.getElementById('sushi').scrollIntoView({behavior:'smooth'})">Sushi</button>
+    <button onclick="document.getElementById('vegan').scrollIntoView({behavior:'smooth'})">Vegan</button>
+  </nav>
+
+  <!-- HAMBURGUESAS -->
+  <section id="hamburguesas">
+    <h2>HAMBURGUESAS</h2>
+
+    <div class="item"><img src="/imagenes/DEMO/Hamburguesa1.png"><div><div class="price">$7.990</div><div class="desc">Deliciosa hamburguesa artesanal</div></div></div>
+    <div class="item"><img src="/imagenes/DEMO/Hamburguesa2.png"><div><div class="price">$8.490</div><div class="desc">Carne premium con ingredientes frescos</div></div></div>
+    <div class="item"><img src="/imagenes/DEMO/Hamburguesa3.png"><div><div class="price">$8.990</div><div class="desc">Sabor intenso y jugoso</div></div></div>
+    <div class="item"><img src="/imagenes/DEMO/Hamburguesa4.png"><div><div class="price">$9.490</div><div class="desc">Clásica con toque gourmet</div></div></div>
+    <div class="item"><img src="/imagenes/DEMO/Hamburguesa5.png"><div><div class="price">$9.990</div><div class="desc">Especial de la casa</div></div></div>
+    <div class="item"><img src="/imagenes/DEMO/Hamburguesa6.png"><div><div class="price">$10.490</div><div class="desc">Para verdaderos amantes</div></div></div>
+  </section>
+
+  <!-- PIZZAS -->
+  <section id="pizzas">
+    <h2>PIZZAS</h2>
+    <div class="item"><img src="/imagenes/DEMO/Pizza1.png"><div><div class="price">$11.990</div><div class="desc">Masa artesanal y queso premium</div></div></div>
+  </section>
+
+  <!-- SUSHI -->
+  <section id="sushi">
+    <h2>SUSHI</h2>
+    <div class="item"><img src="/imagenes/DEMO/Sushi1.png"><div><div class="price">$12.990</div><div class="desc">Rolls frescos preparados al momento</div></div></div>
+  </section>
+
+  <!-- VEGAN -->
+  <section id="vegan">
+    <h2>VEGAN</h2>
+    <div class="item"><img src="/imagenes/DEMO/Vegan1.png"><div><div class="price">$9.490</div><div class="desc">Opción saludable y deliciosa</div></div></div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="social">
+      <a href="#">Instagram</a>
+      <a href="#">Facebook</a>
+      <a href="#">TikTok</a>
+    </div>
+    <p>Dirección: Tu dirección aquí</p>
+    <p>Email: contacto@turestaurante.cl</p>
+    <p>WhatsApp: +56 9 0000 0000</p>
+    <br>
+    <p><strong>¿Quieres tu propio menú online con QR?</strong></p>
+    <p><strong>Déjame un mensaje a mi WhatsApp +56 9 82 600 659</strong></p>
+  </footer>
+
+
+  <!-- BOTÓN VOLVER ARRIBA -->
+  <div class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})"></div>
+
+</body>
+</html>
